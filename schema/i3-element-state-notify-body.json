@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "version": "1.0",
+  "title": "Element State NOTIFY",
+  "description": "SIP NOTIFY message body for Element State notifications",
+  "type": "object",
+  "properties": {
+    "elementState": {
+      "type": "object",
+      "properties": {
+        "elementDomain": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "elementDomain",
+        "state",
+        "reason"
+      ]
+    }
+  },
+  "required": [
+    "elementState"
+  ]
+}

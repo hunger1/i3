@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "version": "1.0",
+  "title": "Gap Overlap NOTIFY",
+  "description": "SIP NOTIFY message body for Gap Overlap notifications",
+  "type": "object",
+  "properties": {
+    "gapOverlap": {
+      "type": "object",
+      "properties": {
+        "agencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "gap": {
+          "type": "boolean"
+        },
+        "dateTime": {
+          "type": "string"
+        },
+        "area": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "agencies",
+        "layers",
+        "gap",
+        "dateTime",
+        "area"
+      ]
+    }
+  },
+  "required": [
+    "gapOverlap"
+  ]
+}
