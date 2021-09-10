@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "version": "1.0",
+  "title": "Service State NOTIFY",
+  "description": "SIP NOTIFY message body for Service State notifications",
+  "type": "object",
+  "properties": {
+    "service": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "domain": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "domain"
+      ]
+    },
+    "serviceState": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "state",
+        "reason"
+      ]
+    },
+    "securityPosture": {
+      "type": "object",
+      "properties": {
+        "posture": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "posture",
+        "reason"
+      ]
+    }
+  },
+  "required": [
+    "service",
+    "serviceState"
+  ]
+}

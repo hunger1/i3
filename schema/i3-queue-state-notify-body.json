@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "version": "1.0",
+  "title": "Queue State NOTIFY",
+  "description": "SIP NOTIFY message body for Queue State notifications",
+  "type": "object",
+  "properties": {
+    "queueState": {
+      "type": "object",
+      "properties": {
+        "queueUri": {
+          "type": "string"
+        },
+        "queueLength": {
+          "type": "number"
+        },
+        "queueMaxLength": {
+          "type": "integer"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "queueUri",
+        "queueLength",
+        "queueMaxLength",
+        "state"
+      ]
+    }
+  },
+  "required": [
+    "queueState"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "version": "1.0",
+  "title": "ESRP Notify NOTIFY",
+  "description": "SIP NOTIFY message body for ESRP Notify notifications",
+  "type": "object",
+  "properties": {
+    "esrpNotify": {
+      "type": "object",
+      "properties": {
+        "queueUri": {
+          "type": "string"
+        },
+        "eventCode": {
+          "type": "string"
+        },
+        "urgency": {
+          "type": "integer"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "callLocation": {
+          "type": "string"
+        },
+        "additionalData": {
+          "type": "string"
+        },
+        "esrpRule": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "queueUri",
+        "eventCode",
+        "urgency",
+        "callLocation",
+        "esrpRule"
+      ]
+    }
+  },
+  "required": [
+    "esrpNotify"
+  ]
+}

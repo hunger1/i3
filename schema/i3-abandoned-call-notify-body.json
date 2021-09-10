@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "version": "1.0",
+  "title": "Abandoned Call NOTIFY",
+  "description": "SIP NOTIFY message body for Abandoned Call notifications",
+  "type": "object",
+  "properties": {
+    "abandonedCall": {
+      "type": "object",
+      "properties": {
+        "invite": {
+          "type": "string"
+        },
+        "inviteTimestamp": {
+          "type": "string"
+        },
+        "cancelTimestamp": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "invite",
+        "inviteTimestamp",
+        "cancelTimestamp"
+      ]
+    }
+  },
+  "required": [
+    "abandonedCall"
+  ]
+}
