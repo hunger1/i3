@@ -1437,6 +1437,7 @@ components:
             - direction
             - statusCode
             - statusDescription
+            - webSocketId
           properties:
             peerId:
               type: string
@@ -1447,6 +1448,9 @@ components:
               type: string
             statusDescription:
               type: string
+            webSocketId:
+              type: string
+
     WebSocketTerminatedLogEvent:
       allOf:
         - $ref: '#/components/schemas/LogEvent'
@@ -1456,6 +1460,7 @@ components:
             - direction
             - closeCode
             - closeReason
+            - webSocketId
           properties:
             peerId:
               type: string
@@ -1467,3 +1472,6 @@ components:
               format: uint16
             closeReason:
               type: string
+            webSocketId:
+              type: string
+
